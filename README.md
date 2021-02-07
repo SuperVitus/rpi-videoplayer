@@ -37,6 +37,7 @@
 | **playing_d** | | | | | | | | |  | *video_completed* | *lid_close* |
 | **played_open** | | | | | | | | | | | *lid_close* |
 | **played_closed** | *timer\_complete\_resolved*| | | | | | | | *lid_opened* | | |
+
 note: italicized values in the table are the events capaple of triggering a state change for each row
 
 
