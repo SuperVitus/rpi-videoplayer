@@ -1,13 +1,14 @@
 ### Setup ###
 `python3 setup.py install`
 
-### State Machine ###
+## State Machine ##
 * Videos
   * **a:** Hello there 
   * **b:** No need to be afraid
   * **c:** Main content
   * **d:** You know what you need to do
 
+### State ###
 | State | On Enter | On Exit | Notes |
 | --- | --- | --- | --- |
 | **intializing_closed** | |
@@ -22,7 +23,7 @@
 | **played_open** | `play video d` | 
 | **played_closed** | `cancel timer d` | |
 
- 
+ ### Transitions ###
 | | initializing_closed | intializing_open | ready_closed | playing_a | introduced_closed | introduced_open | playing_b | playing_c | playing_d | played_open | played_closed |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **intializing_closed** | | *lid_opened* | *intitialized_closed* | | | | | | | | | | 
@@ -36,6 +37,7 @@
 | **playing_d** | | | | | | | | |  | *video_completed* | *lid_close* |
 | **played_open** | | | | | | | | | | | *lid_close* |
 | **played_closed** | *timer\_complete\_resolved*| | | | | | | | *lid_opened* | | |
+note: italicized values in the table are the events capaple of triggering a state change for each row
 
 
 
