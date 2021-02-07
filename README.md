@@ -19,6 +19,7 @@
 * `play video x`
 * `video completed`
 * `set timer x`
+* `timer x resolved`
 * `lid opened/closed`
 
 ### State ###
