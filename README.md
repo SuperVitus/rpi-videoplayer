@@ -1,6 +1,19 @@
 ## Setup ##
 `python3 setup.py install`
 
+## Usage ##
+
+| Option | Default | Description |
+| --- | --- | --- |
+| switch-type | 0 | Switch type - 0 for normally-open, 1 for normally-closed |
+| video-a | | filepath relative to project root |
+| video-b | | filepath relative to project root |
+| video-c | | filepath relative to project root |
+| video-d | | filepath relative to project root |
+| timer-b-delay | 30 | seconds, designed to play **video b** if coffin is not opened back up within 30 seconds of being closed |
+| timer-c-delay | 5 | seconds, a bit of buffer time between (**video a** completed OR opening the coffin the second time) and the start of **video c** |
+| timer-complete-delay | 60 | seconds, the amount of time the coffin lid must be closed for the state to reset to the beginning |
+
 ## State Machine ##
 * Videos
   * **a:** Hello there 
@@ -10,12 +23,12 @@
   * **d:** You know what you need to do
   * * see video c note - we can probably tail this video with the same content
   
-## Timers ##
-* **Timer b:** 30 seconds, designed to play **video b** if coffin is not opened back up within 30 seconds of being closed 
-* **Timer c:** 5 seconds, a bit of buffer time between (**video a** completed OR opening the coffin the second time) and the start of **video c**
-* **Timer complete:** 1-2 minutes, the amount of time the coffin lid must be closed for the state to reset to the beginning
+### Timers ###
+* **Timer b:**
+* **Timer c:**
+* **Timer complete:**
 
-## Events ##
+### Events ###
 * `play video x`
 * `video completed`
 * `set timer x`
