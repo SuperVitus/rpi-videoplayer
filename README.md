@@ -24,10 +24,10 @@
 
  
 | | initializing_closed | intializing_open | ready_closed | playing_a | introduced_closed | introduced_open | playing_b | playing_c | playing_d | played_open | played_closed |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **intializing_closed** | | *lid_open* | *intitialized_closed* | | | | | | | | | 
-| **intializing_open** | *lid_closed* | | | *intitialized_open* | | | | | | | | 
-| **ready_closed** | | | | *lid_open* | | | | | | | | 
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **intializing_closed** | | *lid_open* | *intitialized_closed* | | | | | | | | | | 
+| **intializing_open** | *lid_closed* | | | *intitialized_open* | | | | | | | | | 
+| **ready_closed** | | | | *lid_open* | | | | | | | | |
 | **playing_a** | | | | | *lid_closed* | *video_complete* | | | | | | 
 | **introduced_closed** | | | | | | *lid_open* | *timer\_b\_resolved* | | | | | 
 | **introduced_open** | | | | | *lid_closed* | | | *timer\_c\_resolved* | | | | 
