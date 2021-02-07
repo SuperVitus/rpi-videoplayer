@@ -51,7 +51,7 @@
 | **played_closed** | | |
 
  ### Transitions ###
-| | initializing_closed | intializing_open | ready_closed | playing_a | introduced_closed | introduced_open | playing_b | playing_c | playing_d | played_open | played_closed |
+| State | initializing_closed | intializing_open | ready_closed | playing_a | introduced_closed | introduced_open | playing_b | playing_c | playing_d | played_open | played_closed |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **intializing_closed** | | *lid_opened* | *intitialized_closed* | | | | | | | | | | 
 | **intializing_open** | *lid_closed* | | | *intitialized_open* | | | | | | | | | 
