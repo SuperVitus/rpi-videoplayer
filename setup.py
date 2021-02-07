@@ -16,7 +16,8 @@ def main():
         author='Devin Despain',
         author_email='devin@dspa.in',
         packages=['rpi_videoplayer'],
-        install_requires=['RPi.GPIO'],
+        install_requires=['transitions'],
+        # install_requires=['RPi.GPIO', 'transitions'],
         cmdclass=versioneer.get_cmdclass(),
         zip_safe=True,
         entry_points = {
