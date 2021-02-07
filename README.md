@@ -1,4 +1,4 @@
-### Setup ###
+## Setup ##
 `python3 setup.py install`
 
 ## State Machine ##
