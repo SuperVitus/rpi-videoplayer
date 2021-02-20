@@ -5,14 +5,15 @@
 
 | Option | Default | Description |
 | --- | --- | --- |
-| switch-type | 0 | Switch type - 0 for normally-open, 1 for normally-closed |
-| video-a | | filepath relative to project root |
-| video-b | | filepath relative to project root |
-| video-c | | filepath relative to project root |
-| video-d | | filepath relative to project root |
-| timer-b-delay | 30 | seconds, designed to play **video b** if coffin is not opened back up within 30 seconds of being closed |
-| timer-c-delay | 5 | seconds, a bit of buffer time between (**video a** completed OR opening the coffin the second time) and the start of **video c** |
-| timer-complete-delay | 60 | seconds, the amount of time the coffin lid must be closed for the state to reset to the beginning |
+| switch_type | 0 | Switch type - 0 for normally-open, 1 for normally-closed |
+| gpio_pin | 26 | GPIO pin used for switch |
+| video_a | | filepath relative to project root |
+| video_b | | filepath relative to project root |
+| video_c | | filepath relative to project root |
+| video_d | | filepath relative to project root |
+| timer_b_delay | 30 | seconds, designed to play **video b** if coffin is not opened back up within 30 seconds of being closed |
+| timer_c_delay | 5 | seconds, a bit of buffer time between (**video a** completed OR opening the coffin the second time) and the start of **video c** |
+| timer_complete_delay | 60 | seconds, the amount of time the coffin lid must be closed for the state to reset to the beginning |
 
 ## State Machine ##
 * Videos
@@ -61,8 +62,8 @@
 | **introduced_open** | | | | | *lid_close* | | | *timer\_c\_resolved* | | | | 
 | **playing_b** | | | | | *lid_close* | *lid_open* | | | | | | 
 | **playing_c** | | | | | *lid_close* | | | | | *video_completed* | | 
-| **playing_d** | | | | | | | | |  | *video_completed* | *lid_closee* |
-| **played_open** | | | | | | | | | | | *lid_closee* |
+| **playing_d** | | | | | | | | |  | *video_completed* | *lid_close* |
+| **played_open** | | | | | | | | | | | *lid_close* |
 | **played_closed** | *timer\_complete\_resolved*| | | | | | | | *lid_open* | | |
 
 note: italicized values in the table are the events capaple of triggering a state change for each row
