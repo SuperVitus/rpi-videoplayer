@@ -16,7 +16,7 @@ def main():
         author='Devin Despain',
         author_email='devin@dspa.in',
         packages=['rpi_videoplayer'],
-        install_requires=['transitions'],
+        install_requires=['transitions', 'pynput', 'python-vlc', 'threading'],
         # install_requires=['RPi.GPIO', 'transitions'],
         cmdclass=versioneer.get_cmdclass(),
         zip_safe=True,
